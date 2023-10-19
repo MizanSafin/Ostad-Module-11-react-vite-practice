@@ -1,13 +1,29 @@
 import PropsConcept from "./components/PropsConcept";
-
+import "../src/assets/css/index.css";
+const persons = [
+  {
+    name: "Mizan",
+    age: 29,
+    sex: "male",
+  },
+  {
+    name: "Sahanaj",
+    age: 25,
+    sex: "Female",
+  },
+  {
+    name: "Safin",
+    age: 2,
+    sex: "male",
+  },
+];
 function App() {
-  let date = new Date();
   return (
     <>
       {/* <TernaryExp />
       <ConditionalRendering />
       <MapExp /> */}
-      <PropsConcept data={date.getUTCFullYear()} />
+      <PropsConcept persons={persons} />
     </>
   );
 }

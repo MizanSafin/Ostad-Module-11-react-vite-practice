@@ -1,9 +1,18 @@
 import React from "react";
 
-function PropsConcept({ data }) {
+function PropsConcept({ persons }) {
   return (
     <div>
-      <h1>{data}</h1>
+      {persons.map((person, i) => {
+        const { name, age, sex } = person;
+        return (
+          <div key={i.toString()} className="person">
+            <h2>{name}</h2>
+            <h3>{age}</h3>
+            <h4>{sex}</h4>
+          </div>
+        );
+      })}
     </div>
   );
 }
